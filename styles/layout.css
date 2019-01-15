@@ -1,38 +1,42 @@
 body {
   font-family: 'Roboto', sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 header {
   display: flex;
 
-  padding: 15px 20px;
+  padding: 15px 20px 0;
 
   justify-content: space-between;
 }
 
-article {
-  padding: 55px 22px 96px;
-}
-article h1 {
-  text-align: center;
+.first {
+  padding: 55px 22px 0;
 
+  text-align: center;
+}
+.first h1 {
+  /* text-align: center; */
   font-size: 24px;
   font-weight: 700;
   line-height: 110%;
 }
-article p {
-  margin-top: 20px;
-
-  text-align: center;
-
+p {
   color: rgba(0, 0, 0, 0.5);
 
   font-size: 16px;
   line-height: 120%;
 }
-article a:first-of-type {
+.first p {
+  margin-top: 20px;
+}
+.first a:first-of-type {
+  /* text-align: center; */
   display: inline-block;
 
-  margin: 30px auto;
+  margin-top: 30px;
   padding: 9px 30px;
 
   text-decoration: none;
@@ -42,6 +46,68 @@ article a:first-of-type {
   background: linear-gradient(180deg, rgba(234, 56, 54, 0.75) 0%, rgba(234, 56, 54, 0.3) 119.05%);
   box-shadow: 0px 6px 12px rgba(234, 56, 54, 0.25);
 
-  font-size: 16;
+  font-size: 16px;
   font-weight: 700;
+}
+.card_light {
+  border-radius: 3px;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.light {
+  padding: 80px 30px 0;
+
+  text-align: center;
+}
+.card_light img{
+  margin-top: 30px;
+}
+.card_light h3 {
+  margin-top: 20px;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+.card_light p {
+  padding: 10px 20px 30px;
+}
+.card_light + .card_light {
+  margin-top: 30px;
+}
+
+.dark {
+  margin-top: 90px;
+
+  text-align: center;
+
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(56, 56, 86, 1);
+}
+.dark h2 {
+  display: inline-block;
+
+  margin: 30px 0;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+.card_dark {
+  margin: 0 30px;
+
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.card_dark + .card_dark {
+  margin-top: 20px;
+}
+.card_dark p {
+  margin-left: 30px;
+
+  text-align: left;
+
+  color: rgba(255, 255, 255, 1);
+
+  font-family: 'Nev Time Roman';
+  font-size: 18px;
+  font-style: italic;
 }
