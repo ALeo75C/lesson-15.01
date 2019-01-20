@@ -292,3 +292,43 @@ footer p {
     margin: 42px 90px 30px;
   }
 }
+
+@media (min-width: 1024px){
+  .first h1 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+  .first p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .first img {
+    width: 263.27px;
+    height: 474.15px;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .dark {
+    padding-bottom: 0;
+  }
+  .dark h2 {
+    display: none;
+  }
+  .dark .block {
+    width: 844px;
+
+    flex-wrap: nowrap;
+  }
+  .card_dark {
+    margin: 60px 25px 60px 0;
+  }
+
+  footer {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
