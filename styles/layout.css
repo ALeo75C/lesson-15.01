@@ -10,13 +10,21 @@ header {
   padding: 15px 20px 0;
 
   justify-content: space-between;
+  align-items: center;
+}
+nav {
+  display: none;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  font-size: 12px;
+  line-height: 15px;
+}
+ul {
+  display: flex;
 }
 
-.first {
-  padding: 55px 22px 0;
-
-  text-align: center;
-}
 h1, h2 {
   font-size: 24px;
   font-weight: 700;
@@ -28,7 +36,13 @@ p {
   font-size: 16px;
   line-height: 120%;
 }
-.first p {
+
+.header {
+  padding: 55px 22px 0;
+
+  text-align: center;
+}
+.header p {
   margin-top: 20px;
 }
 a {
@@ -41,7 +55,7 @@ a {
   font-size: 16px;
   font-weight: 700;
 }
-.first a {
+.header a {
   margin-top: 30px;
 
   color: rgba(255, 255, 255, 1);
@@ -49,25 +63,25 @@ a {
   background: linear-gradient(180deg, rgba(234, 56, 54, 0.75) 0%, rgba(234, 56, 54, 0.3) 119.05%);
   box-shadow: 0px 6px 12px rgba(234, 56, 54, 0.25);
 }
-.first img {
+.header img {
   display: none;
 }
+
 .card_light {
   width: 260px;
 
   border-radius: 3px;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
 }
-
 .light {
   padding: 60px 30px 0;
+}
+.first {
+  padding-top: 80px;
 
   text-align: center;
 }
-.f {
-  padding-top: 80px;
-}
-.f h2 {
+.first h2 {
   display: none;
 }
 .card_light img{
@@ -151,13 +165,11 @@ a {
   margin-left: 10px;
 }
 
-.light h2 {
+.second h2 {
   margin-bottom: 30px;
 }
 .card_light h4 {
   padding: 20px 0 5px 20px;
-
-  text-align: left;
 
   font-size: 16px;
   line-height: 23px;
@@ -165,8 +177,6 @@ a {
 .card_light .sale {
   margin-left: 20px;
   padding: 0;
-
-  text-align: left;
 
   color: rgba(0, 0, 0, 1);
 
@@ -187,9 +197,7 @@ a {
   width: 187px;
   margin: 0 auto;
 
-  text-align: left;
-
-  align-items: center;
+  /* align-items: center; */
 }
 .table img, .table p {
   margin: 0;
@@ -225,7 +233,7 @@ footer p {
 
 
 @media (min-width: 768px) {
-  .first {
+  .header {
     display: flex;
 
     padding: 11px 90px 0;
@@ -234,7 +242,7 @@ footer p {
 
     align-items: center;
   }
-  .first img {
+  .header img {
     display: block;
 
     width: 236.08px;
@@ -244,22 +252,24 @@ footer p {
   }
 
   .light {
-    padding: 60px 90px 0;
+    padding: 30px 90px 0;
 
     text-align: left;
+  }
+  .first {
+    text-align: center;
   }
   .block {
     display: flex;
 
-    text-align: center;
-
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .f h2{
+  .first h2{
     display: inline-block;
 
     padding-top: 20px;
+    padding-bottom: 30px;
   }
   .card_light + .card_light {
     margin-top: 0;
@@ -294,15 +304,27 @@ footer p {
 }
 
 @media (min-width: 1024px){
-  .first h1 {
+  header {
+    padding: 20px 90px 0;
+  }
+  header img:last-of-type {
+    display: none
+  }
+  nav {
+    display: block;
+  }
+  li + li {
+    margin-left: 30px;
+  }
+  .header h1 {
     font-size: 36px;
     line-height: 46px;
   }
-  .first p {
+  .header p {
     font-size: 18px;
     line-height: 25px;
   }
-  .first img {
+  .header img {
     width: 263.27px;
     height: 474.15px;
   }
@@ -310,6 +332,39 @@ footer p {
   h2 {
     font-size: 28px;
     line-height: 36px;
+  }
+
+  .first {
+    text-align: left;
+  }
+  .first .block {
+    flex-direction: column;
+  }
+  .first .card_light {
+    display: flex;
+
+    width: 100%;
+
+    align-items: center;
+  }
+  .first img {
+    width: 200px;
+    height: 200px;
+    margin: 30px 70px 30px 80px;
+  }
+  .content h3 {
+    margin: 0;
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    line-height: 34px;
+  }
+  .content p {
+    padding: 0;
+    padding-right: 95px;
+
+    font-size: 22px;
+    line-height: 31px;
   }
 
   .dark {
@@ -325,6 +380,27 @@ footer p {
   }
   .card_dark {
     margin: 60px 25px 60px 0;
+  }
+
+  .second .card_light {
+    width: auto;
+  }
+  .second .table {
+    width: 307px;
+    margin: 0 50px;
+  }
+  .table + .table {
+    margin-top: 24px;
+  }
+  .card_light .line {
+    width: 347px;
+  }
+  .second .card_light p {
+    margin-left: 40px;
+  }
+  .second .card_light h4 {
+    margin-left: 40px;
+    padding: 30px 0 5px 0;
   }
 
   footer {
